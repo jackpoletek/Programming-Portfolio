@@ -91,8 +91,8 @@ public class NumbersModel {
 
         int limit = 9;
 
-        for (int s : linkedList) {
-            compArray.add(limit - s);
+        for (int element : linkedList) {
+            compArray.add(limit - element);
         }
     }
     // DIVIDE COMPUTER LIST compArray INTO 2 SUBLISTS AND STORE THEM IN 2 INT ARRAYS
@@ -111,7 +111,7 @@ public class NumbersModel {
         }
     }
     // CONVERT int[] firstCompArr and int[] secondCompArr into respective integers
-    public int intArrToCompNum(int first, int second) {
+    public void intArrToCompNum() {
 
         for (int i = 0; i < firstCompArr.length; i++) {
             compNum1 = 10 * compNum1 + firstCompArr[i];
@@ -119,6 +119,5 @@ public class NumbersModel {
         for (int i = 0; i < secondCompArr.length; i++) {
             compNum2 = 10 * compNum2 + secondCompArr[i];
         }
-        return compNum2;
     }
 }

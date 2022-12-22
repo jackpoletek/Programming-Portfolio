@@ -32,19 +32,18 @@ public class NumbersController {
             try {
                 firstUserNum = view.getFirstNumber();
                 secondUserNum = view.getSecondNumber();
-                model.getUserInput(firstUserNum, firstUserNum);
+                model.getUserInput(firstUserNum, secondUserNum);
                 model.listToIntArr();
                 model.intArrayToInt();
                 model.splitInt();
                 model.generateCompNums();
                 model.compArrToIntArray();
-                model.intArrToCompNum(view.getFirstNumber(), view.getSecondNumber());
-                view.setFirstCompNumber(model.getCompNum1());
-                view.setSecondCompNumber(model.getCompNum2());
+                model.intArrToCompNum();
+                view.setFirstComputerNumber(model.getCompNum1());
+                view.setSecondComputerNumber(model.getCompNum2());
 
                 if ((firstUserNum < 100 && firstUserNum > 899) || (secondUserNum < 100 && secondUserNum > 899)) {
-                    System.out.println("The number must be between 899 and 100.");
-                    System.out.println("Try again.");
+                    System.out.println("The numbers must be between 899 and 100.");
                 }
 
             } catch(NumberFormatException exception) {

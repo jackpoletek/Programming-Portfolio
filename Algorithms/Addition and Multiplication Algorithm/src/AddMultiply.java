@@ -7,22 +7,27 @@ public class AddMultiply {
         int sum = 0;
         int i = 0;
 
-        int length = arr.length-1;
+        int length = arr.length;
+		int first = arr[0];
+        int last = arr[length-1];
 
-        if (arr.length == 1) {
+        if (length == 1) {
             return arr[i];
         }
 
-        while (i < arr.length-1) {
+        while (i < length-1) {
 
-            if (arr.length%2 != 0) {
-                sum = arr[0];
+            // Odd number of array elements
+        	// Add only the first element
+            if (length%2 != 0) {
+                sum = first;
             }
-            else sum = arr[0] + arr[length];
-
+            
+            // Even number of array elements
+            else sum = first + last;
             i++;
 
-            if (i >= length) {
+            if (i >= length-1) {
                 break;
             }
 

@@ -35,10 +35,11 @@ public class NumbersView extends JFrame{
         return Integer.parseInt(secondUserNum.getText());
     }
 
-    public void setFirstCompNumber(int compNum1) {
+    public void setFirstComputerNumber(int compNum1) {
         firstCompNumber.setText(Integer.toString(compNum1));
     }
-    public void setSecondCompNumber(int compNum2) {
+
+    public void setSecondComputerNumber(int compNum2) {
         secondCompNumber.setText(Integer.toString(compNum2));
     }
 
